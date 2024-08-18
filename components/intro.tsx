@@ -5,7 +5,6 @@ import { FloatingDock } from "./ui/floating-dock";
 import { FileText, LinkedinIcon, Mail } from "lucide-react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import MovableBlurGradient from "./movable-gradient";
-import AnimatedCursor from "react-animated-cursor";
 
 const dockItemDesktop = [
   {
