@@ -3,8 +3,51 @@
 import { IconBrandGithub } from "@tabler/icons-react";
 import { FloatingDock } from "./ui/floating-dock";
 import { BriefcaseBusiness, LinkedinIcon, Mail } from "lucide-react";
+import useIsLargeScreen from "@/hooks/useIsLargeScreen";
+import { useEffect, useState } from "react";
 
+
+const dockItemDesktop = [
+  {
+    title: "Github",
+    icon: <IconBrandGithub color="black" />,
+    href: "https://github.com/ankur-0429",
+  },
+  {
+    title: "Linkedin",
+    icon: <LinkedinIcon color="black" />,
+    href: "https://www.linkedin.com/in/ankur-ahir-93b041211",
+  },
+  {
+    title: "Resume",
+    icon: <BriefcaseBusiness color="black" />,
+    href: "https://drive.google.com/file/d/1lyxDJP1tqZW0tiW1eAgl5Pj0ROYnQRz6/view?usp=sharing",
+  },
+]
+const dockItemMobile = [
+  {
+    title: "Github",
+    icon: <IconBrandGithub color="black" />,
+    href: "https://github.com/ankur-0429",
+  },
+  {
+    title: "Linkedin",
+    icon: <LinkedinIcon color="black" />,
+    href: "https://www.linkedin.com/in/ankur-ahir-93b041211",
+  },
+  {
+    title: "Resume",
+    icon: <BriefcaseBusiness color="black" />,
+    href: "https://drive.google.com/file/d/1lyxDJP1tqZW0tiW1eAgl5Pj0ROYnQRz6/view?usp=sharing",
+  },
+  {
+    title: "Mail",
+    icon: <Mail color="black" />,
+    href: "mailto:ahir.ankur0429@gmail.com"
+  }
+]
 const Intro = () => {
+  const {isLargeScreen} = useIsLargeScreen();
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full min-h-screen">
@@ -13,34 +56,16 @@ const Intro = () => {
           <div className="flex w-screen justify-between px-10">
             <div className="flex-1" />
             <div className="mb-5">
-              <FloatingDock
-                items={[
-                  {
-                    title: "Github",
-                    icon: <IconBrandGithub color="black" />,
-                    href: "https://github.com/ankur-0429",
-                  },
-                  {
-                    title: "Linkedin",
-                    icon: <LinkedinIcon color="black" />,
-                    href: "https://www.linkedin.com/in/ankur-ahir-93b041211",
-                  },
-                  {
-                    title: "Resume",
-                    icon: <BriefcaseBusiness color="black" />,
-                    href: "https://drive.google.com/file/d/1lyxDJP1tqZW0tiW1eAgl5Pj0ROYnQRz6/view?usp=sharing",
-                  },
-                ]}
-              />
+              <FloatingDock items={isLargeScreen ? dockItemDesktop:dockItemMobile} />
             </div>
             <div className="flex flex-1 justify-end">
               <a
                 href="mailto:ahir.ankur0429@gmail.com"
-                className="flex items-center justify-center mb-5">
+                className="hidden lg:flex items-center justify-center mb-5">
                 <div className="bg-[#FFFFE3] rounded-full p-3 z-10">
                   <Mail color="black" />
                 </div>
-                <div className="pr-3 pl-8 py-3 bg-[#171717] ml-[-1.5rem] rounded-lg">
+                <div className="pr-3 lg:block pl-8 py-3 bg-[#171717] ml-[-1.5rem] rounded-xl">
                   <p>ahir.ankur0429@gmail.com</p>
                 </div>
               </a>
