@@ -103,7 +103,7 @@ const Project = (project: ProjectProps) => {
 
 const Projects = () => {
   return (
-    <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-8 md:px-10 sm:text-2xl">
+    <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-8 md:px-10 sm:text-2xl mb-20">
       <h1 className="mb-6 text-2xl font-semibold sm:text-3xl md:text-4xl">
         PROJECTS
       </h1>
