@@ -3,9 +3,7 @@
 import { IconBrandGithub } from "@tabler/icons-react";
 import { FloatingDock } from "./ui/floating-dock";
 import { BriefcaseBusiness, LinkedinIcon, Mail } from "lucide-react";
-import useIsLargeScreen from "@/hooks/useIsLargeScreen";
-import { useEffect, useState } from "react";
-
+import useMediaQuery from "@/hooks/useMediaQuery";
 
 const dockItemDesktop = [
   {
@@ -47,7 +45,7 @@ const dockItemMobile = [
   }
 ]
 const Intro = () => {
-  const {isLargeScreen} = useIsLargeScreen();
+  const isLargeScreen = useMediaQuery("(min-width: 1024px");
   return (
     <>
       <div className="flex flex-col items-center justify-center w-full min-h-screen">
