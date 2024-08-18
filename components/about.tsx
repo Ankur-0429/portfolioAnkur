@@ -4,8 +4,8 @@ import { LinkPreview } from "./ui/link-preview";
 
 const About = () => {
   return (
-    <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-8 md:px-10 sm:text-2xl">
-      <h1 className="mt-8 text-2xl font-semibold sm:text-3xl md:text-4xl">
+    <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-8 md:px-10 sm:text-2xl mt-6 mb-20">
+      <h1 className="text-2xl font-semibold sm:text-3xl md:text-4xl">
         WHAT I DO
       </h1>
       <blockquote className="mt-6 border-l-2 pl-6 italic mb-4 leading-relaxed text-white/70">

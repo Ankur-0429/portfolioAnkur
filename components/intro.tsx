@@ -66,7 +66,7 @@ const Intro = () => {
                     <Mail color="black" />
                   </div>
                 </a>
-                <div className="pr-3 lg:block pl-8 py-3 bg-[#171717] ml-[-1.5rem] rounded-xl">
+                <div className="pr-3 lg:block pl-8 py-3 bg-[#171717] ml-[-1.5rem] rounded-2xl">
                   <p>ahir.ankur0429@gmail.com</p>
                 </div>
               </div>
