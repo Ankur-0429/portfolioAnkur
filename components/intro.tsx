@@ -2,8 +2,10 @@
 
 import { IconBrandGithub } from "@tabler/icons-react";
 import { FloatingDock } from "./ui/floating-dock";
-import { BriefcaseBusiness, LinkedinIcon, Mail } from "lucide-react";
+import { FileText, LinkedinIcon, Mail } from "lucide-react";
 import useMediaQuery from "@/hooks/useMediaQuery";
+import MovableBlurGradient from "./movable-gradient";
+import AnimatedCursor from "react-animated-cursor";
 
 const dockItemDesktop = [
   {
@@ -18,7 +20,7 @@ const dockItemDesktop = [
   },
   {
     title: "Resume",
-    icon: <BriefcaseBusiness color="black" />,
+    icon: <FileText color="black" />,
     href: "https://drive.google.com/file/d/1lyxDJP1tqZW0tiW1eAgl5Pj0ROYnQRz6/view?usp=sharing",
   },
 ]
@@ -35,7 +37,7 @@ const dockItemMobile = [
   },
   {
     title: "Resume",
-    icon: <BriefcaseBusiness color="black" />,
+    icon: <FileText color="black" />,
     href: "https://drive.google.com/file/d/1lyxDJP1tqZW0tiW1eAgl5Pj0ROYnQRz6/view?usp=sharing",
   },
   {
@@ -47,7 +49,7 @@ const dockItemMobile = [
 const Intro = () => {
   const isLargeScreen = useMediaQuery("(min-width: 1024px");
   return (
-    <>
+    <MovableBlurGradient>
       <div className="flex flex-col items-center justify-center w-full min-h-screen">
         <div className="absolute inset-0 bg-[radial-gradient(#ffffff33_1px,#00091d_1px)] bg-[size:20px_20px] opacity-80 md:opacity-70 pointer-events-none"></div>
         <div className="absolute bottom-0 left-0">
@@ -87,8 +89,8 @@ const Intro = () => {
               <span className="text-white">&</span> MOBILE
             </div>
             <div>
-              <p>Based in San</p>
-              <p>Fransisco, CA</p>
+              <p>Based in Santa</p>
+              <p>Cruz, CA</p>
             </div>
           </div>
           <div className="flex items-center justify-center gap-2">
@@ -98,7 +100,7 @@ const Intro = () => {
           </div>
         </div>
       </div>
-    </>
+    </MovableBlurGradient>
   );
 };
 
