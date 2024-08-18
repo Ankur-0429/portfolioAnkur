@@ -1,6 +1,6 @@
 "use client";
 import * as HoverCardPrimitive from "@radix-ui/react-hover-card";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import { encode } from "qss";
 import React from "react";
 import {
@@ -83,7 +83,7 @@ export const LinkPreview = ({
             width={width}
             height={height}
             quality={quality}
-            layout={layout}
+            className={layout}
             priority={true}
             alt="hidden image"
           />
@@ -141,9 +141,8 @@ export const LinkPreview = ({
                     width={width}
                     height={height}
                     quality={quality}
-                    layout={layout}
                     priority={true}
-                    className="rounded-lg"
+                    className={cn("rounded-lg", layout)}
                     alt="preview image"
                   />
                 </Link>

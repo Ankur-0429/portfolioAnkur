@@ -5,7 +5,10 @@ import { LinkPreview } from "./ui/link-preview";
 const About = () => {
   return (
     <div className="w-full max-w-screen-lg mx-auto px-4 sm:px-8 md:px-10 sm:text-2xl">
-      <span className="mb-4 leading-relaxed text-white/70">
+      <h1 className="mt-8 text-2xl font-semibold sm:text-3xl md:text-4xl">
+        WHAT I DO
+      </h1>
+      <blockquote className="mt-6 border-l-2 pl-6 italic mb-4 leading-relaxed text-white/70">
         Back in 2017, I decided to build a pathfinding visualizer using HTML and
         CSS and realized my path for web development. Fast-forward to today, and
         I had the privilage to work for a{" "}
@@ -34,7 +37,7 @@ const About = () => {
         </LinkPreview>
         , and for a{" "}
         <LinkPreview
-          url="https://github.com/Solutions-Challenge/Green-day-frontend.gitm"
+          url="https://github.com/Solutions-Challenge/Green-day-frontend.git"
           className="font-bold bg-clip-text text-transparent bg-gradient-to-br from-purple-500 to-pink-500">
           <span
             className="group text-white font-semibold transition-all duration-300 ease-in-out"
@@ -45,12 +48,11 @@ const About = () => {
           </span>
         </LinkPreview>
         .
-      </span>
-
-      <p className="text-white/70">
-        Today, my main focus is completing my masters in computer science and
-        engineering, with emphasis on distributed systems and GPU programming.
-      </p>
+        <p className="text-white/70 mt-10">
+          Today, my main focus is completing my masters in computer science and
+          engineering, with emphasis on distributed systems and GPU programming.
+        </p>
+      </blockquote>
     </div>
   );
 };
